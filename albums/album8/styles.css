@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: gray;
+}
+
+header {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    max-height: 200px; /* 设置每行图片的最大高度 */
+    width: 100%; /* 图像宽度占满容器 */
+    object-fit: contain; /* 保持纵横比，适应容器，超出部分等比例缩放 */
+}
+
+.photo {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    position: relative;
+    transition: filter 2s;
+}
+
+.photo:hover img {
+    filter: brightness(0.8);
+}
+
+.photo:hover::before {
+    content: attr(data-number);; /* Display tooltip text on hover */
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: grey;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+.quote {
+    font-size: 28px;
+    color: grey;
+    text-align: center;
+    margin: 20px;
+    font-family: serif;
+    font-style: normal;
+    font-weight: lighter;
+}
+.author {
+    font-size: 28px;
+    color: grey;
+    text-align: right;
+    display: block;
+    font-style: normal;
+    font-family: serif;
+    margin-right: 50px
+}
+
