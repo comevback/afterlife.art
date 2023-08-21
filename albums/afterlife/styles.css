@@ -29,7 +29,7 @@ header {
 }
 
 .photo:hover img {
-    filter: brightness(0.8);
+    filter: brightness(1.1);
 }
 
 .photo:hover::before {
@@ -115,4 +115,3 @@ video[poster] {
     font-family: serif;
     margin-right: 50px
 }
-

@@ -13,11 +13,6 @@ header {
     padding: 1rem;
 }
 
-h1{
-    font-family: serif;
-    margin: 20px;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -26,7 +21,7 @@ h1{
 }
 
 .gallery img {
-    max-height: 200px; /* 设置每行图片的最大高度 */
+    max-height: 300px; /* 设置每行图片的最大高度 */
     width: 100%; /* 图像宽度占满容器 */
     object-fit: contain; /* 保持纵横比，适应容器，超出部分等比例缩放 */
 }
@@ -40,7 +35,7 @@ h1{
 }
 
 .photo:hover img {
-    filter: brightness(0.8);
+    filter: brightness(1.1);
 }
 
 .photo:hover::before {
@@ -62,6 +57,52 @@ h1{
     height: auto;
 }
 
+video {
+    border:1px;
+    width:25%;
+    height:auto;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+video[poster] {
+    width: 60%; /* Make the poster image responsive */
+    max-height: 100vh; /* Limit the height to the viewport height */
+    object-fit: cover; /* Scale the image to cover the container */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
 .quote {
     font-size: 28px;
     color: grey;
@@ -80,4 +121,3 @@ h1{
     font-family: serif;
     margin-right: 50px
 }
-

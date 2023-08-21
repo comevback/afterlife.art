@@ -28,9 +28,10 @@ header {
     transition: filter 2s;
 }
 
-.photo:hover img {
-    filter: brightness(1.05);
-}
+.photo:hover img{
+	filter: brightness(1.1);
+
+} 
 
 .photo:hover::before {
     content: attr(data-number);; /* Display tooltip text on hover */
@@ -38,7 +39,7 @@ header {
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.15);
     color: grey;
     padding: 5px;
     border-radius: 5px;
@@ -88,6 +89,9 @@ video[poster] {
     display: block;
 }
 
+.modal-content img{
+}
+
 .close {
     position: absolute;
     top: 15px;
@@ -115,4 +119,3 @@ video[poster] {
     font-family: serif;
     margin-right: 50px
 }
-

@@ -1,7 +1,7 @@
 const galleryContainer = document.getElementById('gallery');
 
 // Loop through the range of photos and create photo elements
-for (let i = 1; i <= 125; i++) {
+for (let i = 1; i <= 124; i++) {
     const photoDiv = document.createElement('div');
     photoDiv.className = 'photo';
    
