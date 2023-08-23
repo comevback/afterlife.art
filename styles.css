@@ -1,7 +1,7 @@
 body {
     margin: 0;
     margin-top: 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,30 +10,38 @@ body {
 }
 
 .page-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    text-align: left;
+	height: 100%;
+    text-align: center;
     color: grey; /* Example text color */
-    padding: 20px 0;
+    padding: 5px 0;
     font-family: serif;
+	flex-shrink: 0;
 }
 
 .page-title {
-    margin: 20px;
-    padding: 0;
+    margin: 0px;
+}
+
+main{
+	flex-shrink: 0;
+	position: absolute;
+    margin: 50px;
+	align-self: center;
 }
 
 #gallery {
     display: grid;
-	top: 50px;
+	top:40px;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
-    padding: 20px;
+    padding: 0px 20px 0 20px;
     overflow-y: auto;
-	max-width: 85vw;
-	max-height: 60vh;
+	max-height: 88vh;
+	max-width: 90vw;
 }
 
 #gallery>*{
@@ -43,6 +51,9 @@ body {
 
 #afterlife, #seaburial{
 	grid-column: span 3;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .gallery img {
@@ -138,6 +149,7 @@ video {
     justify-content: center;
     align-items: center;
     height: 100vh;
+	min-height: 40px;
 }
 
 video[poster] {
@@ -167,6 +179,30 @@ video[poster] {
 
 .footer{
 	position: fixed;
-	bottom: 20px;
+	bottom: 5px;
 	color: grey;
+	text-align:center;
+	width: 100vw;
+}
+
+@media (max-width: 880px){
+	main{
+		margin: 0px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	#gallery{
+		grid-template-columns: repeat(1, 1fr);
+		max-width: 95vw;
+	}
+	
+	#gallery>*{
+		grid-column: span 1;
+	}
+
+	.image-overlay-text{
+		font-size: 2rem;
+	}
+	
 }
