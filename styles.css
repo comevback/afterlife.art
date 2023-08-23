@@ -5,18 +5,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
     flex-direction: column;
+	background-color: black;
 }
 
 .page-header {
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
-	height: 100%;
     text-align: center;
-    color: grey; /* Example text color */
+    color: gray; /* Example text color */
     padding: 5px 0;
     font-family: serif;
 	flex-shrink: 0;
@@ -24,6 +23,7 @@ body {
 
 .page-title {
     margin: 0px;
+	font-size: 4rem;
 }
 
 main{
@@ -35,13 +35,14 @@ main{
 
 #gallery {
     display: grid;
-	top:40px;
+	top: 50px;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
-    padding: 0px 20px 0 20px;
+    padding: 0px 40px 0 60px;
+	margin-top: 40px;
     overflow-y: auto;
-	max-height: 88vh;
-	max-width: 90vw;
+	max-height: 85vh;
+	max-width: 85vw;
 }
 
 #gallery>*{
@@ -101,7 +102,7 @@ main{
 .image-overlay-text {
     text-align: center;
     font-family: serif;
-    font-size: 2em; 
+    font-size: 3em; 
     color: lightgrey;
     padding: 10px;
 }
@@ -125,7 +126,7 @@ main{
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 1);
     color: grey;
     padding: 5px;
     border-radius: 5px;
@@ -177,24 +178,36 @@ video[poster] {
     margin-right: 50px
 }
 
+
 .footer{
 	position: fixed;
-	bottom: 5px;
-	color: grey;
+	bottom: 1px;
+	color: gray;
 	text-align:center;
 	width: 100vw;
 }
 
 @media (max-width: 880px){
+	body{
+		display: flex;
+		justify-content: center;
+	}
+
 	main{
 		margin: 0px;
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
 	
+	.page-title{
+		font-size: 2rem;
+		margin-top: 10px;
+	}
+
 	#gallery{
 		grid-template-columns: repeat(1, 1fr);
-		max-width: 95vw;
+		max-width: 90vw;
+		padding: 0px;
 	}
 	
 	#gallery>*{
@@ -204,5 +217,12 @@ video[poster] {
 	.image-overlay-text{
 		font-size: 2rem;
 	}
+
+	.welcome-page {
+    	background-image: url('mobile-cover.jpg') no-repeat center center;
+        background-size: cover;
+	}
 	
 }
+
+
