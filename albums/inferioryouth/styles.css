@@ -20,6 +20,12 @@ header {
     padding: 20px;
 }
 
+.gallery img {
+    max-height: 300px; /* 设置每行图片的最大高度 */
+    width: 100%; /* 图像宽度占满容器 */
+    object-fit: contain; /* 保持纵横比，适应容器，超出部分等比例缩放 */
+}
+
 .photo {
     padding: 10px;
     text-align: center;
@@ -114,4 +120,19 @@ video[poster] {
     font-style: normal;
     font-family: serif;
     margin-right: 50px
+}
+
+.footer{
+        text-align: center;
+}
+
+@media (max-width: 880px){
+        .gallery{
+                grid-template-columns: repeat(1 , 1fr);
+                max-width: 90vw;
+        }
+		
+		.gallery img{
+			max-height: none;
+		}
 }

@@ -26,24 +26,18 @@ body {
 }
 
 #gallery {
-    display: grid;
-	top: 50px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    overflow-y: auto;
-	max-width: 85vw;
-	max-height: 60vh;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1rem;
+	height: 60vh;
 }
 
-#gallery>*{
-	grid-column: span 2;
-	object-fit: contain;
+#gallery>a{
+	width: 24rem;
 }
 
-#afterlife, #seaburial{
-	grid-column: span 3;
-}
+
 
 .gallery img {
     max-height: 1000px; /* 设置每行图片的最大高度 */
@@ -64,7 +58,6 @@ body {
 .album-image {
     max-width: 100%;
     height: auto;
-    display: block;
     transition: filter 0.3s;
 }
 
@@ -166,7 +159,8 @@ video[poster] {
 }
 
 .footer{
-	position: fixed;
-	bottom: 20px;
 	color: grey;
+	position: static;
+	margin-bottom: 5px;
+	padding: 0px;
 }

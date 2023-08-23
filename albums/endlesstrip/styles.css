@@ -59,7 +59,7 @@ header {
 
 video {
     border:1px;
-    width:80%;
+    width:25%;
     height:auto;
 }
 
@@ -120,4 +120,19 @@ video[poster] {
     font-style: normal;
     font-family: serif;
     margin-right: 50px
+}
+
+.footer{
+        text-align: center;
+}
+
+@media (max-width: 880px){
+        .gallery{
+                grid-template-columns: repeat(1 , 1fr);
+                max-width: 90vw;
+        }
+		
+		.gallery img{
+			max-height: none;
+		}
 }

@@ -15,13 +15,13 @@
     </header>
     <main>
         <section class="gallery" id="gallery">
-            <a href="albums/afterlife/index.htm" class="album-link" id="afterlife">
+            <a href="albums/afterlife/index.htm" class="album-link">
                 <img src="albums/afterlife/cover.jpg" alt="Afterlife" class="album-image">
                 <div class="image-overlay">
                     <p class="image-overlay-text">Afterlife</p>
                 </div>
             </a>
-            <a href="albums/seaburial/index.htm" class="album-link" id="seaburial">
+            <a href="albums/seaburial/index.htm" class="album-link">
                 <img src="albums/seaburial/cover.jpg" alt="seaburial" class="album-image">
                 <div class="image-overlay">
                     <p class="image-overlay-text">Sea Burial</p>
