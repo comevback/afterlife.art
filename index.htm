@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: white;
+      background-color: black;
     }
 
     .navbar-nav {
@@ -35,7 +35,11 @@
       min-height: 5rem;
     }
 
-    .text-black,
+    .text-black {
+      font-weight: 400;
+      font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
+    }
+
     .text-white {
       color: lightgray !important;
       font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
@@ -50,6 +54,12 @@
       -o-animation: AnimationNamex 16s ease infinite;
       animation: AnimationNamex 16s ease infinite;
 
+    }
+
+    #video-index,
+    #carousel {
+      background: linear-gradient(0deg, black, white, black);
+      padding-bottom: 7rem;
     }
   </style>
   <script>
@@ -77,22 +87,6 @@
       // Scroll to the desired program section (e.g., program2)
       document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
     });
-
-    //——————————————————————————————————————————————————————————————————————————————————音乐//
-
-    var bgMusic = document.getElementById('bg-music');
-    var stopButton = document.getElementById('stop-button');
-
-    stopButton.addEventListener('click', function () {
-      if (bgMusic.paused) {
-        bgMusic.play();
-        stopButton.innerText = '停止音乐';
-      } else {
-        bgMusic.pause();
-        stopButton.innerText = '播放音乐';
-      }
-    });
-
   </script>
 </head>
 
@@ -132,16 +126,16 @@
     </div>
   </div>
 
-  <div class="container-fluid" id="video-index">
-    <h1 class="text-white py-5">AFTERLIFE</h1>
-    <video controls poster="./cover.jpg" src="./afterlife.mp4" class="object-fit-contain" type="video/mp4"></video>
+  <div class="container-fluid py-5" id="video-index">
+    <h1 class="text-black py-5">AFTERLIFE</h1>
+    <video controls poster="./cover.jpg" src="./afterlife.mp4" class="object-fit-contain mb-5" type="video/mp4"></video>
   </div>
 
-  <div class="p-5 text-center bg-gradient-first">
+  <!--<div class="p-5 text-center bg-gradient-first">
     <div class="container py-10">
-      <!--<h1 class="text-white">Sea burial</h1>-->
+      <h1 class="text-white">Sea burial</h1>
     </div>
-  </div>
+  </div>-->
 
   <div class="p-1 text-center bg-gradient-first">
     <div class="container py-1">
@@ -149,20 +143,20 @@
     </div>
   </div>
 
-  <div class="container-fluid" id="video-index">
-    <h1 class="text-white py-5">SEA BURIAL</h1>
+  <div class="container-fluid py-5" id="video-index">
+    <h1 class="text-black py-5">SEA BURIAL</h1>
     <video controls poster="./albums/seaburial/cover.jpg" src="./albums/seaburial/SeaBurial.mp4"
-      class="object-fit-contain" type="video/mp4"></video>
+      class="object-fit-contain mb-5" type="video/mp4"></video>
   </div>
 
-  <div class="p-5 text-center bg-gradient-first">
+  <!--<div class="p-5 text-center bg-gradient-first">
     <div class="container py-10">
-      <!--<h1 class="text-white">ALBUMS</h1>
+      <h1 class="text-white">ALBUMS</h1>
       <p class="col-lg-8 mx-auto lead text-white">
         My albums
-      </p>-->
+      </p>
     </div>
-  </div>
+  </div>-->
 
   <div class="p-1 text-center bg-gradient-first">
     <div class="container py-1">
@@ -170,9 +164,9 @@
     </div>
   </div>
 
-  <div class="container" id="carousel">
-    <h1 class="text-white py-5">Albums In Progress</h1>
-    <div id="myCarousel" class="carousel slide carousel-fade mb-6" data-bs-ride="carousel">
+  <div class="container-fluid py-5" id="carousel">
+    <h1 class="text-black py-5">Albums In Progress</h1>
+    <div id="myCarousel" class="carousel slide carousel-fade col-9 mb-5" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active"
           aria-current="true"></button>
@@ -188,7 +182,7 @@
         <div class="carousel-item active">
           <a href="albums/afterlife/index.htm" class="album-link" id="afterlife">
             <img src="albums/afterlife/cover.jpg" alt="Afterlife" class="album-image" />
-            <div class="container image-overlay">
+            <div class="image-overlay">
               <p class="image-overlay-text">Afterlife</p>
             </div>
           </a>
@@ -261,11 +255,11 @@
     </div>
   </div>
 
-  <div class="p-5 text-center bg-gradient-first">
+  <!--<div class="p-5 text-center bg-gradient-first">
     <div class="container py-10">
-      <!--<h1 class="text-white">goodbye</h1>-->
+      <h1 class="text-white">goodbye</h1>
     </div>
-  </div>
+  </div>-->
 
   <div class="p-1 text-center bg-gradient-first">
     <div class="container py-1">
