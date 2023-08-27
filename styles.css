@@ -6,14 +6,14 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-	/*background-color: black,; */
-	background: linear-gradient(90deg, #000000, #121212, #565656, #878787, #f2f2f2, #f2f2f2, #878787, #565656, #121212, #000000);
-    background-size: 1200% 1200%;
+	background-color: black;
+	/*background: linear-gradient(90deg, #000000, #121212, #565656, #878787, #f2f2f2, #f2f2f2, #878787, #565656, #121212, #000000);
+    background-size: 1200% 1200%;*/
 
-    -webkit-animation: AnimationName 16s ease infinite;
+    /*-webkit-animation: AnimationName 16s ease infinite;
     -moz-animation: AnimationName 16s ease infinite;
     -o-animation: AnimationName 16s ease infinite;
-    animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;*/
 
 }
 
@@ -80,14 +80,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*background: linear-gradient(90deg, #000000, #121212, #565656, #878787, #f2f2f2, #f2f2f2, #878787, #565656, #121212, #000000);
+	background: linear-gradient(90deg, #000000, #121212, #565656, #878787, #f2f2f2, #f2f2f2, #878787, #565656, #121212, #000000);
 	/*background: linear-gradient(90deg, #000000, #181818, #303030, #676767, #999999, #bbbbbb, #dfdfdf, #fbfbfb, #e4e4e4, #c5c5c5, #9d9d9d, #7f7f7f, #4e4e4e, #303030, #181818, #000000);*/
-    /*background-size: 1800% 1800%;*/
+    background-size: 1800% 1800%;
 
-    /*-webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    -o-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 10s ease infinite;*/
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    -o-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
 
 }
 
@@ -289,6 +289,7 @@ video[poster] {
 
 	#myCarousel{
 		max-width: 100%;
+		width: 100%;
 	}
 
 	.page-header{
@@ -298,7 +299,7 @@ video[poster] {
 
 	}	
 	.page-title{
-		font-size: 3rem;
+		font-size: 2rem;
 		writing-mode: vertical-rl;
 	}
 
