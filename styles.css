@@ -92,7 +92,7 @@ body {
 }
 
 .page-title {
-	font-size: 4rem;
+	font-size: 3rem;
 	font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
 }
 
@@ -299,7 +299,7 @@ video[poster] {
 
 	}	
 	.page-title{
-		font-size: 3rem;
+		font-size: 2rem;
 		writing-mode: vertical-rl;
 	}
 
