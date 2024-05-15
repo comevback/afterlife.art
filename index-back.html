@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afterlife Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .bg-gradient-btow {
+      background: linear-gradient(0deg, white, #000000);
+      min-height: 5rem;
+    }
+
+    .bg-gradient-wtob {
+      background: linear-gradient(0deg, #000000, white);
+      min-height: 5rem;
+    }
+
+    .text-black {
+      font-weight: 400;
+      font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
+    }
+
+    .text-white {
+      color: #999999 !important;
+      font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
+    }
+
+    .bg-gradient-first {
+      background: linear-gradient(0deg, #000000, #121212, #565656, #878787, #f2f2f2, #f2f2f2, #878787, #565656, #121212, #000000);
+      background-size: 1800% 1800%;
+
+      -webkit-animation: AnimationNamex 16s ease infinite;
+      -moz-animation: AnimationNamex 16s ease infinite;
+      -o-animation: AnimationNamex 16s ease infinite;
+      animation: AnimationNamex 16s ease infinite;
+
+    }
+
+    .container-fluid.py-5 {
+      background: linear-gradient(0deg, #999999, black);
+      padding-bottom: 7rem;
+    }
+
+    .container-fluid.py-4 {
+      background: linear-gradient(0deg, #999999, lightgray, white, lightgray, #999999);
+      padding-bottom: 7rem;
+    }
+
+    #carousel {
+      background: linear-gradient(0deg, black, #999999);
+      padding-bottom: 7rem;
+    }
+  </style>
+  <script>
+    // Define an array of titles to cycle through
+    const titles = [
+      "徐响的画廊",
+      "Xu Xiang's Gallery",
+      "スーシアンのギャラリー",
+    ];
+    let titleIndex = 0;
+
+    // Function to change the title
+    function changeTitle() {
+      const titleElement = document.querySelector(".page-title");
+      titleElement.textContent = titles[titleIndex];
+      titleIndex = (titleIndex + 1) % titles.length;
+    }
+
+    // Trigger the title change every 8 seconds (8000 milliseconds)
+    setInterval(changeTitle, 8000);
+    //——————————————————————————————————————————————————————————————————————————————————//
+    //将用户固定到欢迎页面//
+    // Scroll to the desired program section (e.g., program2) on page load
+    window.addEventListener('load', function () {
+      // Scroll to the desired program section (e.g., program2)
+      document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-gradient-first">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">TOP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#myCarousel">albums</a>
+          </li>
+          <li class="nav-item">
+            <audio id="bg-music" controls autoplay loop>
+              <source src="./Gustixa_Rhianne_somewhere_only_we_know_.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="page-header" id="header">
+    <h1 class="page-title">スーシアンのギャラリー</h1>
+  </header>
+
+  <div class="p-1 text-center bg-gradient-first">
+    <div class="container py-1">
+      <!--<h1 class="text-white">ntmy</h1>-->
+    </div>
+  </div>
+
+  <div class="container-fluid py-5" id="video-index">
+    <h1 class="text-white py-5">AFTERLIFE</h1>
+    <video controls poster="./cover.jpg" src="./afterlife.mp4" class="object-fit-contain mb-5" type="video/mp4"></video>
+  </div>
+
+  <!--<div class="p-5 text-center bg-gradient-first">
+    <div class="container py-10">
+      <h1 class="text-white">Sea burial</h1>
+    </div>
+  </div>-->
+
+  <div class="p-1 text-center bg-gradient-first">
+    <div class="container py-1">
+      <!--<h1 class="text-white">ntmy</h1>-->
+    </div>
+  </div>
+
+  <div class="container-fluid py-4" id="video-index">
+    <h1 class="text-black py-5">SEA BURIAL</h1>
+    <video controls poster="./albums/seaburial/cover.jpg" src="./albums/seaburial/SeaBurial.mp4"
+      class="object-fit-contain mb-5" type="video/mp4"></video>
+  </div>
+
+  <div class="p-1 text-center bg-gradient-first">
+    <div class="container py-1">
+      <!--<h1 class="text-white">ntmy</h1>-->
+    </div>
+  </div>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Devices</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Location</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+      </ul>
+      <p class="text-center text-white">© 2023. Xu Xiang. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
